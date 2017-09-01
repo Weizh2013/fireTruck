@@ -1,0 +1,6 @@
+<!-- 责任人修改 -->
+<view class="modifyView">
+  <input type='text' value='{{admin}}' bindinput='getAdminStr' />
+  <label>请输入责任人</label>
+  <view bindtap="adminChanged">确定</view>
+</view>

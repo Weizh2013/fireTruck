@@ -1,0 +1,22 @@
+<!--uploadImage.wxml-->
+
+<view class="selectInfoView">
+  <view>
+    已选择{{imageArray.length}}张照片
+  </view>
+</view>
+
+<view class="imageBackView">
+  <view class="imageView" wx:for="{{imageArray}}">
+    <image src="{{imageArray[index]}}" bindtap="previewPhoto" bindlongtap="deletePhoto" data-index='{{index}}' style="width:100%;height:100%;"></image>
+  </view>
+  <view class="imageView" style="border:1px dashed gray;border-radius:10px;" bindtap="addImage">
+    <view class="addImg">+</view>
+    <view class="addImgA">请上传图片</view> 
+  </view>
+</view>
+
+<view class="completeView">
+  <view class="completeBt" bindtap="completeBt">完成</view>
+</view>
+

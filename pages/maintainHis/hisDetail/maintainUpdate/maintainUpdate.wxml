@@ -1,0 +1,121 @@
+<!--maintainUpdate.wxml-->
+<scroll-view class="updateView">
+  <view class="itemView">
+    <text class="keyT">保养编号:</text>
+    <text class="valueT">{{recorderNO}}</text>
+  </view>
+
+  <view class="itemView">
+    <text class="keyT">保养计划:</text>
+    <text class="valueT">{{recorderPlan}}</text>
+  </view>
+
+  <view class="itemView">
+    <text class="keyT">保养车牌:</text>
+    <text class="valueT">{{carNO}}</text>
+  </view>
+
+  <view class="itemView">
+    <text class="keyT">所属单位:</text>
+    <text class="valueT">{{unit}}</text>
+  </view>
+
+  <view class="itemView" style="height:auto;">
+    <view class="textView">
+      <text class="keyT">保养部件:</text>
+    </view>
+    <view class="partsView">
+      <view class="partsItem" wx:for="{{partsInfo}}">
+        <view style="width:100%;height:100%;margin:0;padding:0" data-index='{{index}}' bindtap="changePartStau">
+          <text class="keyT" style="font-weight:normal;">{{item.unit.name}}:</text>
+          <text class="valueT">{{partStatus[item.status].name}}</text>
+          <view class="inputView">
+            <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+          </view>
+        </view>
+    </view>
+    </view>
+  </view>
+
+  <picker mode="date" value="{{recorderTime}}" start="2000-01-01" end="{{todayDate}}" bindchange="changeDate">
+    <view class="itemView" >
+      <text class="keyT">保养时间:</text>
+      <text class="valueT">{{recorderTime}}</text>
+      <view class="inputView">
+        <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+      </view>
+    </view>
+  </picker> 
+
+   <view class="itemView" bindtap="positionModify">
+    <text class="keyT">保养地点:</text>
+    <text class="valueT">{{position}}</text>
+    <view class="inputView">
+      <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+    </view>
+  </view>
+
+  <view class="itemView" bindtap="adminModify">
+    <text class="keyT">责任人:</text>
+    <text class="valueT">{{dutyMans}}</text>
+    <view class="inputView">
+      <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+    </view>
+  </view>
+
+  <view class="itemView">
+    <view style="width:100%;height:100%;margin:0;padding:0" data-index='{{index}}' bindtap="changeCompleteStau">
+      <text class="keyT">当前状态:</text>
+      <text class="valueT">{{statusArray[recorderStatus].name}}</text>
+      <view class="inputView">
+        <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="itemView" bindtap="uploadImageBt">
+    <view class="keyT">上传图片:</view>
+    <text class="valueT">已上传{{imageArray.length}}张图片</text>
+    <view class="inputView">
+      <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+    </view>
+  </view>
+
+  <view class="itemView" style="height:auto;" bindtap="contentModify">
+    <view style="height:auto;width:90%;float:left;">
+      <view class="keyT">保养内容:</view>
+      <view class="valueT" style="height:auto;word-break:break-all;">{{maintainContent}}</view>
+    </view>
+    <view class="inputView">
+      <image src="/images/input.png" style="width:11px;height:20px;margin:0;"></image>
+    </view>
+  </view>
+
+  <view class="submitView">
+    <view class="submitBt" bindtap="submitInfo">提交</view>
+  </view>
+
+  <!-- mask view: 默认隐藏 -->
+  <view class="selectMask" style="display: {{maskDisplay}}" bindtouchstart="exitMask"></view>
+  
+  <!-- 部件保养状态弹窗: 默认隐藏 -->
+  <view class="windowSelect" style="display: {{partSelectDisplay}}">
+    <label class="titleLabel">{{partsInfo[partsIndex].unit.name}}</label>
+    <radio-group class="radio-group" style="height:400rpx" bindchange="partStatusChanged">
+      <label class="radio" wx:for="{{partStatus}}" id="status{{index}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- 保养完成状态修改弹窗: 默认隐藏 -->
+  <view class="windowSelect" style="display: {{completeDisplay}}">
+    <label class="titleLabel">当前状态</label>
+    <radio-group class="radio-group" style="height:400rpx" bindchange="completeSelect">
+      <label class="radio" wx:for="{{statusArray}}" id="complete{{index}}">
+        <radio value='{{item.value}}' checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+
+</scroll-view>

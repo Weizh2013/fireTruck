@@ -1,0 +1,2 @@
+<!--fireRoute.wxml-->
+ <map id="fireMap" longitude='{{fireInfo.longitude}}' latitude='{{fireInfo.latitude}}' scale="14" markers="{{markers}}" bindmarkertap='fireTapped' style="width:100%;height:{{screenHeight}}"></map>

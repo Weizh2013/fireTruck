@@ -1,0 +1,6 @@
+<!-- 保养地点修改弹窗: 默认隐藏 -->
+<view class="modifyView">
+  <input type='text' value='{{position}}' bindinput='getPositionStr' />
+  <label>请输入保养地点</label>
+  <view bindtap="positionChanged">确定</view>
+</view>

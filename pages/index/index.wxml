@@ -1,0 +1,23 @@
+<!--index.wxml-->
+
+<view animation="{{titleViewAnimation}}" class="titleView">
+  <view animation="{{imageAnimation}}" class="avatarView">
+     <image src="{{avatarImg}}"></image> 
+  </view>
+  <button class="loginBt" style="display:{{loginDisplay}}" bindtap="wxLogin">微信登陆</button>
+  <label class="nicknameLb" animation="{{labelAnimation}}" style="display:{{userInfoDisplay}}">{{nickName}}</label>
+</view>
+
+<view class="infoView" id="phoneNumView" style="display:{{userInfoDisplay}}">
+  <text class="keyT">电话号码</text>
+  <text class="valueT">{{phoneNum}}</text>
+</view>
+
+<view class="infoView" id="roleView" style="display:{{userInfoDisplay}}">
+  <text class="keyT">角色</text>
+  <text class="valueT">{{role}}</text>
+</view>
+
+<!-- <view animation="{{animationData}}" class="animationView" bindtap='animationStart'></view> -->
+
+

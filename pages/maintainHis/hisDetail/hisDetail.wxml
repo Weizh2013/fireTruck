@@ -1,0 +1,22 @@
+<!--hisDetail.wxml-->
+
+<view class="imgView">
+  <image src="{{imagePath}}"></image>
+</view>
+<view class="detailView">
+  <view class="infoView" wx:for="{{infoArray}}">
+    <text class="keyT">{{item.key}}:</text>
+    <view class="valueT" style="height:auto;word-break:break-all;">{{item.value}}</view>
+  </view>
+</view>
+<view class="partsView">
+  <view class="parts keyT" style="border:none;">待保部件:</view>
+  <view class='partView' wx:for="{{partsArray}}" style="border-bottom: 1px dashed #f4f4f4">
+    <view class="partName">{{item.unit.name}}:</view>
+    <view class="partStatus" style="color: {{partStatusColor[item.status]}}">{{partStatus[item.status]}}</view>
+  </view>
+</view>
+<view class="updateView">
+  <view class="updateBt" bindtap="updateInfo">更新</view>
+</view>
+

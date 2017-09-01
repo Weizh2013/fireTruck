@@ -1,0 +1,12 @@
+<!--maintainList.wxml-->
+
+<view class="bodyView">
+  <view class="proCell" wx:for="{{proArray}}">
+    <view class="tapView" data-index="{{index}}" bindtap="proDetailClicked">
+      <view class="imageView">
+        <image src="{{item.equipmentMinType.bigImagePath}}"></image>
+      </view>
+      <view class="textView">{{item.name}}</view> 
+    </view>
+  </view>
+</view>

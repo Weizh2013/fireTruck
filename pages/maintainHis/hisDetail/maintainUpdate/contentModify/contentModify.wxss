@@ -1,0 +1,54 @@
+/* contentModify.wxss */
+
+.modifyView {
+  width: 650rpx;
+  height: 100%;
+  margin: 0;
+  padding: 30px 50rpx 0 50rpx;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modifyView textarea {
+  width: 100%;
+  height: 121px;
+  line-height: 30px;
+  border-bottom: 1px solid green;
+  font-size: 18px;
+}
+
+.labelView {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 15px;
+  color: gray;
+  font-size: 15px;
+}
+
+.tips {
+  margin: 0;
+  width: 50%;
+  text-align: left;
+  float: left;
+}
+
+.numCount {
+  margin: 0;
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+
+.buttonView {
+  background-color: green;
+  color: white;
+  width: 200rpx;
+  margin: 30px 225rpx 0 225rpx;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+}

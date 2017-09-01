@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/maintain/maintain",
+    "pages/index/index",
+    "pages/fireRoute/fireRoute",
+    "pages/maintain/proDetail/proDetail",
+    "pages/maintainHis/maintainHis",
+    "pages/maintainHis/hisDetail/hisDetail",
+    "pages/maintainHis/hisDetail/maintainUpdate/maintainUpdate",
+    "pages/maintainHis/hisDetail/maintainUpdate/uploadImage/uploadImage",
+    "pages/maintainHis/hisDetail/maintainUpdate/adminModify/adminModify",
+    "pages/maintainHis/hisDetail/maintainUpdate/positionModify/positionModify",
+    "pages/maintainHis/hisDetail/maintainUpdate/contentModify/contentModify",
+    "pages/index/bindNum/bindNum"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "消防车",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "gray",
+    "selectedColor": "#ED0000",
+    "list": [
+      {
+        "pagePath": "pages/maintain/maintain",
+        "text": "保养计划",
+        "iconPath": "images/maintain_pro.png",
+        "selectedIconPath": "images/maintain_pro_active.png"
+      },
+      {
+        "pagePath": "pages/maintainHis/maintainHis",
+        "text": "保养记录",
+        "iconPath": "images/maintain_list.png",
+        "selectedIconPath": "images/maintain_list_active.png"
+      },
+      {
+        "pagePath": "pages/fireRoute/fireRoute",
+        "text": "火灾",
+        "iconPath": "images/fire.png",
+        "selectedIconPath": "images/fire_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_active.png"
+      }
+    ]
+  },
+  "debug": true
+}

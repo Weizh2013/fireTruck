@@ -1,0 +1,15 @@
+<!--bindNum.wxml-->
+<view class="tipView">您的账号尚未绑定，请输入手机号</view>
+<view class="phoneNumView">
+  <view class="zone">+86</view>
+  <view class="phoneNum">
+    <input type="text" placeholder="输入手机号" bindinput="phoneNumChanged" />
+  </view>
+</view>
+<view class="codeView">
+  <view class="validateCode">
+    <input type="text" placeholder="输入验证码" bindinput="codeChanged" />
+  </view>
+  <button class="codeBt" style="background-color:{{btColor}}" bindtap="getCode">点击获取{{clock}}</button>
+</view>
+<button class="submitBt">确定</button>

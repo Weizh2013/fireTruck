@@ -1,0 +1,14 @@
+<!--maintainHis.wxml-->
+
+<view class="bodyView">
+  <view class="hisCell" wx:for="{{recorderList}}">
+    <view class="tapView" data-index="{{index}}" bindtap="hisDetailClicked">
+      <view class="imageView">
+        <image src="{{item.maintenancePlan.equipmentMinType.imagePath}}"></image>
+      </view>
+      <view id="readFlag" class="readFlag" style="display:{{readFlagDis[index].display}}"></view>
+      <view class="carNumView" style="{{readFlagDis[index].weight}}">{{item.vehicleNO}}</view> 
+      <view class="proView" style="color:{{readFlagDis[index].color}};font-weight:{{readFlagDis[index].weight}}">{{item.maintenancePlan.name}}</view>
+    </view>
+  </view>
+</view>

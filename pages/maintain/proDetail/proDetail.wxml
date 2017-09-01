@@ -1,0 +1,18 @@
+<!--proDetail.wxml-->
+<view class="imgView">
+  <image src="{{imageUrl}}"></image>
+</view>
+
+<view class="detailView">
+  <view class="infoView" wx:for="{{infoArray}}" style="height:auto;width:90%;float:left;">
+    <text class="keyT">{{item.key}}:</text>
+    <view class="valueT" style="height:auto;word-break:break-all;">{{item.value}}</view>
+  </view>
+</view>
+
+<!-- <view class="detailView">
+  <view class="infoView" wx:for="{{infoArray}}">
+    <text class="keyT">{{item.key}}:</text>
+    <text class="valueT">{{item.value}}</text>
+  </view>
+</view> -->

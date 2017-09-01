@@ -1,0 +1,45 @@
+/* proDetail.wxss */
+
+.imgView {
+  width: 80%;
+  margin-left: 10%;
+}
+.imgView image {
+  width: 100%;
+}
+
+.detailView {
+  width: 90%;
+  margin-left: 5%;
+  background-color: white;
+  height: auto;
+  overflow: hidden;
+}
+
+.infoView {
+  width: 100%-5px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 5px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.keyT {
+  display: block;
+  width: 80px;
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+.valueT {
+  display: block;
+  margin-left: 10px;
+  float: left;
+  text-align: left;
+  font-weight: normal; 
+  font-size: 15px;
+  color: #a0a0a0;      /*#c8c8c8;*/
+}
